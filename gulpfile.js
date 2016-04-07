@@ -178,7 +178,7 @@ gulp.task('watch',['images','stylesheets', 'scripts', 'browser-sync'], function(
 
   gulp.watch([paths.views], function (e){ // gulp watch for erb changes
         gulp.src(e.path)
-        .pipe(wait(1000))
+        .pipe(wait(2000))
         .pipe(reload({stream:true}));
   });
 

@@ -37,7 +37,7 @@ var paths = {
   'fontsEntryPoint': '/source/stylesheets/fonts/**.*',
   'fontsDist': 'dist/css/fonts',
 
-  'views': 'source/**/*.erb',
+  'views': 'source/**/*.slim',
 
   'imageEntryPoint': 'source/images/**/*.+(png|jpg|jpeg|gif|svg)',
   'imageDist': './dist/images',
@@ -180,6 +180,8 @@ gulp.task('watch',['images','stylesheets', 'scripts', 'browser-sync'], function(
         gulp.src(e.path)
         .pipe(wait(2000))
         .pipe(reload({stream:true}));
+
+
   });
 
   gulp.watch([paths.imageEntryPoint], function (callback){ // gulp watch for image changes
